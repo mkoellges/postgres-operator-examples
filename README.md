@@ -5,5 +5,7 @@ Install the crunchy Postgres Operator:
 ```sh
 kubectl create ns pgo
 
+kubens pgo
+
 helm install pgo ./helm/install
 ```
