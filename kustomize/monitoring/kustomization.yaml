@@ -1,7 +1,8 @@
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
-namespace: postgres-operator
+namespace: monitoring
 resources:
+  - namespace.yaml
   - pvcs.yaml
   - ./dashboards
 # configuration files
@@ -27,4 +28,4 @@ configMapGenerator:
   files:
     - crunchy_grafana_dashboards.yml
 generatorOptions:
- disableNameSuffixHash: true
+  disableNameSuffixHash: true
