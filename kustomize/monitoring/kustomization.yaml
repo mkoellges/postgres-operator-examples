@@ -1,8 +1,7 @@
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
-namespace: monitoring
+namespace: pgo
 resources:
-  - namespace.yaml
   - pvcs.yaml
   - ./dashboards
 # configuration files
